@@ -17,7 +17,7 @@ def clean(list):
         if str(w) == '>':
             stop = False
     return(word.replace("\n",""))
-def postillion():
+def get():
     liste = ["https://tagesschau.de/xml/rss2","https://www.transfermarkt.de/rss/news"]
     title1 = []
     title = []
