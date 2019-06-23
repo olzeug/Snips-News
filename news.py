@@ -36,12 +36,14 @@ def get():
         description += [clean(i)]
     for e in title1:
         title += [clean(e)]
-    if len(title) > 1:
+    if len(title) > 2:
         rss_str = ""
         for item in title:
             rss_str = rss_str+str(item)+', '
         return("{} und {}.".format(rss_str,title[-1]))
     elif len(title) == 1:
         return("{}. {}".format(title[0],description[0]))
+    elif len(title) == 2:
+        return("{}, {}".format(title[0],title[1]))
     else:
         return("Es gibt keine News.")
