@@ -39,7 +39,7 @@ def get():
     if len(title) > 2:
         rss_str = ""
         for item in title:
-            rss_str = rss_str+str(item)+', <break time='10ms'/>'
+            rss_str = rss_str+str(item)+', <break time="10ms"/>'
         return("{} und {}.".format(rss_str,title[-1]))
     elif len(title) == 1:
         return("{}. {}".format(title[0],description[0]))
