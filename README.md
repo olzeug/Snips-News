@@ -39,10 +39,6 @@ There you can store your own RSS feeds.</li>
 </article>
       </div>
   </div>
-
-
-
-  </div>
   <div class="modal-backdrop js-touch-events"></div>
 </div>
   </div>
