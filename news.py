@@ -1,5 +1,5 @@
 import feedparser
-from datetime import date,datetime
+from datetime import datetime
 import time
 
 def rss_reader(url):
