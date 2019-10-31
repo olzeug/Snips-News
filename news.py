@@ -8,10 +8,10 @@ def rss_reader(url):
     except:
         return
 
-def clean(list):
+def clean(liste):
     stop = False
     word = ''
-    for w in str(list):
+    for w in str(liste):
         if str(w) == '<':
             stop = True
         if stop == False:
