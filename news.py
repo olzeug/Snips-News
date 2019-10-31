@@ -20,8 +20,8 @@ def clean(liste):
             stop = False
     return(word.replace("\n",""))
 
-def get():
-    news_feeds = ["https://tagesschau.de/xml/rss2","https://www.transfermarkt.de/rss/news"]
+def get(conf):
+    news_feeds = conf["secret"]["rss_feeds"].split()
     title1 = list()
     title = list()
     description1 = list()
