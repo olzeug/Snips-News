@@ -16,5 +16,5 @@ then
 fi
 
 . $VENV/bin/activate
-
+chmod +x /var/lib/snips/skills/Snips-News/action-getNews.py
 pip install -r requirements.txt
