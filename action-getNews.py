@@ -30,7 +30,7 @@ def subscribe_intent_callback(hermes, intentMessage):
     action_wrapper(hermes, intentMessage, conf)
 
 def action_wrapper(hermes, intentMessage, conf):
-    hermes.publish_end_session(intentMessage.session_id,news.get())
+    hermes.publish_end_session(intentMessage.session_id,news.get(conf))
 
 if __name__ == "__main__":
     mqtt_opts = MqttOptions()
