@@ -22,7 +22,7 @@ def clean(liste):
 
 def get(conf):
     news_feeds = conf["secret"]["rss_feeds"].split()
-    if len(news_feeds) = 0:
+    if len(news_feeds) == 0:
         return "Es ist kein RSS-Feed hinterlegt"
     title1 = list()
     title = list()
