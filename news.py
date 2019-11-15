@@ -14,7 +14,7 @@ def clean(liste):
     for w in str(liste):
         if str(w) == '<':
             stop = True
-        if stop == False:
+        if stop is False:
             word = word+str(w)
         if str(w) == '>':
             stop = False
