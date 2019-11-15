@@ -24,9 +24,7 @@ def get(conf):
     news_feeds = conf["secret"]["rss_feeds"].split()
     if len(news_feeds) == 0:
         return "Es ist kein RSS-Feed hinterlegt"
-    title1 = list()
     title = list()
-    description1 = list()
     description = list()
     heute = datetime.strptime(time.strftime("%d.%m.%Y %H:%M:%S"), "%d.%m.%Y %H:%M:%S")
     for news_feed in news_feeds:
@@ -34,14 +32,10 @@ def get(conf):
             response = rss_reader(news_feed)
             date = datetime.fromtimestamp(time.mktime(response['published_parsed']))
             if (round((heute - date).seconds/3600, 0) <= 2):
-                title1 += [response['title']]
-                description1 += [response['description']]
+                title += [clean(response['title'])]
+                description += [clean(response['description'])]
         except:
             pass
-    for i in description1:
-        description += [clean(i)]
-    for e in title1:
-        title += [clean(e)]
     if len(title) > 2:
         rss_str = ""
         for item in title:
